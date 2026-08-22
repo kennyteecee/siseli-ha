@@ -16,7 +16,7 @@ license = "MIT"
 license-files = ["LICENSE", "NOTICE"]
 dependencies = [
     "paho-mqtt>=1.6,<2.0",
-    "scapy>=2.5,<2.7",
+    "scapy>=2.7.0,<2.8",
 ]
 
 [project.optional-dependencies]
