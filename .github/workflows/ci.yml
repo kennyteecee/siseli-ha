@@ -14,7 +14,7 @@ jobs:
         python-version: ['3.9', '3.11', '3.12']
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v5
@@ -58,7 +58,7 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -75,7 +75,7 @@ jobs:
   addon-lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Home Assistant add-on linter
         # frenck/action-addon-linter was renamed to action-app-linter in August 2026,
         # when Home Assistant renamed add-ons to apps. The old path still resolves, but
@@ -114,6 +114,6 @@ jobs:
     # Python. Nothing in smoke-test.sh pins a platform, so it needs no changes.
     timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Build and start the add-on (${{ matrix.arch }})
         run: bash scripts/smoke-test.sh
