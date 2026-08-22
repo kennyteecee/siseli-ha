@@ -15,7 +15,7 @@ license = "MIT"
 # records the upstream project's unlicensed status.
 license-files = ["LICENSE", "NOTICE"]
 dependencies = [
-    "paho-mqtt>=1.6,<2.0",
+    "paho-mqtt>=2.1.0,<3.0",
     "scapy>=2.5,<2.7",
 ]
 
